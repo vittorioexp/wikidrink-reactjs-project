@@ -1,9 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-const Card = () => {
+const Card = ({ className, title, subtitle, icon, text, img }) => {
   return (
-    <Wrapper>
-      <div className="card container">Card</div>
+    <Wrapper className={className || ""}>
+      <div className="card container">
+        <div className="card-title">
+          <h4>{title}</h4>
+        </div>
+        {subtitle ? (
+          <div className="card-subtitle">
+            <h6>{subtitle}</h6>
+          </div>
+        ) : (
+          <div className="card-icon">{icon}</div>
+        )}
+        {text ? (
+          <div className="card-text">
+            <p>{text}</p>
+          </div>
+        ) : (
+          <div className="card-img">
+            <img src={img} alt={title} />
+          </div>
+        )}
+      </div>
     </Wrapper>
   );
 };
@@ -39,9 +59,17 @@ const Wrapper = styled.article`
       padding: 0;
     }
     .card-img {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
       border-radius: 50%;
+    }
+    .card-img img {
+      display: inline;
+      margin: 0 auto;
+      height: 100%;
+      width: auto;
       filter: brightness(80%);
     }
     .card-text {
