@@ -19,6 +19,7 @@ function App() {
         <Route path="/cocktail/:id" element={<SingleCocktailScreen />} />
         <Route path="*" element={<ErrorScreen />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
