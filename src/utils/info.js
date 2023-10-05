@@ -39,10 +39,10 @@ export const teamCards = [
     title: "Charlie Sheen",
     img:
       "https://www.ecodelcinema.com/wp-content/uploads/2013/10/Charlie-Sheen.png",
-    subtitle: "Stakeholder & Testimonial",
+    subtitle: "Stakeholder",
   },
   {
-    title: "Shia Lebeouf",
+    title: "Shia J. Lebeouf",
     img:
       "https://www.corriere.it/methode_image/2021/01/15/Moda/Foto%20Moda/8%20shia%20labeouf.jpg",
     subtitle: "Creative Director",
