@@ -2,9 +2,57 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { HiClipboardList } from "react-icons/hi";
+import { useGlobalContext } from "../context";
 
-const Cocktail = () => {
-  return <Wrapper>Cocktail</Wrapper>;
+const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
+  const [show, setShow] = useState(false);
+  const { getScrollPosition, deleteScrollPosition } = useGlobalContext();
+  const navigate = useNavigate();
+
+  const goToCocktail = (_id) => {
+    getScrollPosition(window.pageY);
+    navigate(`cocktail/${_id}`);
+  };
+
+  const showInfo = () => {
+    setShow(true);
+    console.log(`container card-text-sm ${show ? "show-info" : ""}`);
+  };
+  const hideInfo = () => {
+    setShow(false);
+    console.log(`container card-text-sm ${show ? "show-info" : ""}`);
+  };
+
+  return (
+    <Wrapper onMouseEnter={showInfo} onMouseLeave={hideInfo} onClick={() => goToCocktail(_id)}>
+      <div
+        className="img"
+        style={{
+          background: `url(${img})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepear: "no-repeat",
+        }}
+      ></div>
+      <div className={`container card-text ${show ? "show-info" : ""}`}>
+        <h5>{name}</h5>
+        <div className="see-more-btn brand-color">
+          <h5>Recipe</h5>
+          <HiClipboardList className="icon" />
+        </div>
+      </div>
+      <div className="container card-text-sm">
+        <h5>{name}</h5>
+        <div
+          className="see-more-btn brand-color"
+          
+        >
+          <h5>Recipe</h5>
+          <HiClipboardList className="icon" />
+        </div>
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.article`
