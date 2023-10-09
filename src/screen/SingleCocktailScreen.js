@@ -103,7 +103,7 @@ const SingleCocktailScreen = () => {
             <div className="spacer">
               <h4>Instructions:</h4>
               <p className="info">
-                {strInstructionsIT || strInstructions}
+                {strInstructions || strInstructionsIT}
               </p>
             </div>
           </div>
