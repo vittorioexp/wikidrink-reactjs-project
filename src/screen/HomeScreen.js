@@ -48,7 +48,7 @@ const HomeScreen = () => {
               scelerisque in. Fusce ornare, nunc id consequat vulputate, nisl
               arcu cursus lorem, consequat pharetra quam ligula eleifend odio.
             </p>
-            <Link className="btn btn-primary">Click for more!</Link>
+            <Link className="btn btn-primary" to="/about">Click for more!</Link>
           </div>
           <div className="home-hero-img">
             <Lottie
