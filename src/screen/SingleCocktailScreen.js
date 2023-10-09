@@ -154,7 +154,7 @@ const Wrapper = styled.section`
         width: 100%;
         border-radius: var(--radius);
       }
-      .cocktail-datails {
+      .cocktail-details {
         display: grid;
         gap: 1rem;
         h2 {
@@ -206,7 +206,7 @@ const Wrapper = styled.section`
         grid-row: 1/1;
         width: 100%;
       }
-      .cocktail-datails {
+      .cocktail-details {
         grid-column: 6/-1;
         grid-row: 1/1;
         width: 100%;
