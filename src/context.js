@@ -5,7 +5,7 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [query, setQuery] = useState("negroni");
+  const [query, setQuery] = useState("Spritz");
   const [scrollPosition, setScrollPosition] = useState(0);
   const { isLoading, isError, data, count } = useFetch(`s=${query}`);
 
