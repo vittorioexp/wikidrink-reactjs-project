@@ -165,6 +165,7 @@ const Wrapper = styled.section`
           grid-template-columns: auto auto auto;
           justify-content: flex-start;
           gap: 0.5rem !important;
+          align-items: center;
           .label {
             text-transform: lowercase;
             font-size: 0.8em;
