@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Lottie from "react-lottie";
-import animationData from "../assets/animation/not-found.json";
 import { Link } from "react-router-dom";
+import animationData from "../assets/animation/not-found.json";
+import useTitle from "../useTitle";
+
 const ErrorScreen = () => {
+  useTitle("Page not found");
+
   return (
     <Wrapper>
       <h3>Page not found</h3>
