@@ -57,9 +57,9 @@ const HomeScreen = () => {
                 autoplay: true,
                 reverse: true,
                 animationData,
-                rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
+                /* rendererSettings: { preserveAspectRatio: "xMidYMid slice" }, */
               }}
-              height={350}
+              height={300}
             ></Lottie>
           </div>
         </div>
