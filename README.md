@@ -1,3 +1,7 @@
+![](https://github.com/vittorioexp/wikidrink-reactjs-project/blob/main/demo.gif)
+---
+
+
 # WikiDrink React Project
 
 WikiDrink is a responsive web application that provides information about various drinks. You can explore different drinks, view their details, and even search for specific drinks.  WikiDrink is designed to work seamlessly on various devices, including desktop and mobile.
